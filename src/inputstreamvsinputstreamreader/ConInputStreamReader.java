@@ -1,4 +1,5 @@
 package inputstreamvsinputstreamreader;
+import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 
@@ -19,14 +20,14 @@ public class ConInputStreamReader {
 		
 		
 		InputStreamReader r = null;
-		if (args.length == 0) {
-			r = new InputStreamReader (System.in);
+		if (args.length == 1) {
+			r = new InputStreamReader (new FileInputStream(args[0]));
 		} else {
-			r = new InputStreamReader (System.in, args[0]);
+			r = new InputStreamReader (new FileInputStream(args[0]), args[1]);
 		}
 		int c;
 		while ((c = r.read()) != -1 ){ 
-			System.out.format("%c %x  - ", c , c);
+			System.out.format("%c.", c);
 		}
 		
 	}
