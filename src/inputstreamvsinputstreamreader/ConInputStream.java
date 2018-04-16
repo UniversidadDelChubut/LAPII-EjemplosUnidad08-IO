@@ -8,6 +8,7 @@ public class ConInputStream {
 	 * @param args
 	 */
 	public static void main(String[] args) throws Exception {
+		
 		System.out.println(Charset.defaultCharset());
 		
 		int c;

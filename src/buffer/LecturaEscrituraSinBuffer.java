@@ -13,7 +13,7 @@ public class LecturaEscrituraSinBuffer {
 		long inicio = System.currentTimeMillis();
 		
 		InputStream is = new FileInputStream("baudelaire.pdf");
-		OutputStream os =new FileOutputStream("baudelaire_copia1.pdf");
+		OutputStream os = new FileOutputStream("baudelaire_copia1.pdf");
 		int c;
 		while ((c= is.read()) != -1 ){
 			os.write(c);
